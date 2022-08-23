@@ -12,9 +12,9 @@ node index.js
 ```
 
 2. Curl localhost:3000 for the first time. You'll notice the duration is relatively long.  
-<img src="./docs/uncached.png" width="400">
+<img src="./docs/uncached.png">
 
 3. However, all subsequent calls are much faster.  
-<img src="./docs/cached.png" width="400">
+<img src="./docs/cached.png">
 
 4. To clear cache and repeat experience again, curl localhost:3000/flush
