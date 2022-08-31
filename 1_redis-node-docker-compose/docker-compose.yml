@@ -1,0 +1,16 @@
+version: '2'
+
+services:
+  my_really_awesome_redis:
+    image: redis:6.2-alpine
+    expose:
+      - 6379
+
+  my-node-app:
+    build: .
+    volumes:
+      - ./:/usr/src/app
+    environment: 
+      # Must follow the format
+      # `redis://${redis-service-name}:6379`
+      REDIS_URL: 'redis://my_really_awesome_redis:6379'
